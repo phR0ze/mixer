@@ -38,6 +38,10 @@ func main() {
 		newpath := filepath.Join(filepath.Dir(x), newname)
 		fmt.Printf("%v => %v\n", x, newpath)
 		sys.Move(x, newpath)
+
+		// Update the modified time
+		now := time.Now().Local()
+		os.Chtimes(newpath, now, now)
 	}
 }
 
