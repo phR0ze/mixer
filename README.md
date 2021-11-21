@@ -1,2 +1,2 @@
 # mixer
-mix the filenamesin a directory
+mix the filenames in a directory
